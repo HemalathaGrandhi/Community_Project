@@ -44,15 +44,43 @@ ul
   display: block;
   padding: 0 30px;
   opacity: 1;
+  position: fixed;
+  left: 270px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
 }
+.section.back-section
+{
+    z-index: 1;
+}
+.section.active
+{
+    z-index: 2;
+    opacity: 1;
+    animation: slideSection 1s ease;
+}
+@keyframes slideSection
+{
+    0%
+    {
+        transform: translateX(100%);
+    }
+    100%
+    {
+        transform: translateX(0%);
+    }
+}    
+
 .hidden
 {
     display: none !important;
 }
-.main-content
-{
-    padding-left: 270px;
-}
+
 .padd-15
 {
     padding-left: 15px;
@@ -147,6 +175,7 @@ ul
   justify-content: center;
   align-items: center;
   z-index: 10;
+  transition: all 0.3s ease;
 }
 .aside .logo
 {
@@ -191,7 +220,7 @@ ul
   top: 0;
   right: 0; 
 }
-.aside .nav-toggler
+/*.aside .nav-toggler
 {
     height: 40px;
     width: 45px;
@@ -205,35 +234,77 @@ ul
     display: none;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 .aside .nav-toggler span
 {
-    height: 2px;
+    height: 4px;
     width:18px;
     background: var(--skin-color);
     display: inline-block;
     position: relative;
 }
-.aside .nav-toggler span ::before
-{
+*/
+/* .aside .nav-toggler */
+.aside .nav-toggler {
+    height: 40px;
+    width: 45px;
+    border: 1px solid var(--bg-black-50);
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    border-radius: 5px;
+    background: var(--bg-black-100);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.aside .nav-toggler span {
+    height: 4px;
+    width: 18px;
+    background: var(--skin-color);
+    display: block;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.aside .nav-toggler.open span {
+    background-color: transparent;
+}
+
+.aside .nav-toggler span::before,
+.aside .nav-toggler span::after {
     content: '';
     height: 2px;
     width: 18px;
     background: var(--skin-color);
     position: absolute;
+    transition: all 0.3s ease;
+}
+
+.aside .nav-toggler span::before {
     top: -6px;
-    left: 0;
 }
-.aside .nav-toggler span ::after
-{
-    content: '';
-    height: 2px;
-    width: 18px;
-    background: var(--skin-color);
-    position: absolute;
+
+.aside .nav-toggler span::after {
     top: 6px;
-    left: 0;
 }
+
+.aside .nav-toggler.open span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.aside .nav-toggler.open span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
 .aside .nav
 {
     margin-top: 50px;
@@ -380,11 +451,8 @@ h3.my-profession
 }
 .surveyinfo .surveyinfo-content .personal-info .buttons .btn
 {
-    margin-right: 15px;
     margin-top: 10px;
 }
-
-
 
 .surveyinfo .surveyinfo-content .advantages,
 .surveyinfo .surveyinfo-content .disadvantages
@@ -497,6 +565,21 @@ h3.my-profession
     text-align: justify;
     color: var(--text-black-700);
 }
+
+/* advantage and disadvantage */
+.gallery-item1 {
+    flex: 1 1 45%;
+    max-width: 45%;
+    margin: 15px;
+}
+.gallery-item-inner1:hover {
+    transform: scale(1.05);
+}
+.gallery-img1 img {
+    width: 30rem;
+    height:20rem;
+}
+
 /* surveydetails*/
 .surveydetails .container
 {
@@ -624,8 +707,8 @@ h3.my-profession
     height: 300px; 
 }
 /*gallery*/
-.gallery {
-    padding: 50px 0;
+.gallery .container {
+    padding-bottom: 40px;
 }
 .gallery .section-title {
     margin-bottom: 30px;
@@ -652,6 +735,73 @@ h3.my-profession
     height: auto;
     display: block;
 }
+
+/* IMPACT */
+.impact .impact-content
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.impact .impact-content .impact-text
+{
+    flex: 0 0 100%;
+    max-width: 100%;   
+}
+.impact .impact-content .impact-text h3
+{
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--text-black-900);
+}
+.impact .impact-content .impact-text h3 span
+{
+    color: var(--skin-color);
+}
+.impact .impact-content .impact-text p
+{
+    font-size: 19px;
+    line-height: 25px;
+    color: var(--text-black-700);
+}
+.impact .impact-content .impact-text .impact-intro 
+{
+    flex: 0 0 60%;
+    margin-top: 40px;
+}
+/* Impact images */ 
+.gallery-item19 {
+    flex: 1 1 45%;
+    max-width: 45%;
+    margin: 15px;
+}
+.gallery-item-inner19 {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.gallery-item-inner19:hover {
+    transform: scale(1.05);
+}
+.gallery-img19 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.container1,.container2{
+    display: flex;
+}
+.container1 img,.container2 img{
+    height: 300px ;
+}
+.gallery-item-s img{
+    width: 98%;
+    height: 400px;
+    margin-top: 10px;
+}
+
 /* QUESTIONNAIRE */
 .questions .section-title {
     margin-bottom: 25px;
@@ -668,35 +818,6 @@ h3.my-profession
     color: var(--text-black-900);
     text-align: center;
     font-size: 27px;
-}
-
-/* Conclusion */
-.conclusion .conclusion-content
-{
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-.conclusion .conclusion-content .conclusion-text
-{
-    flex: 0 0 100%;
-    max-width: 100%;   
-}
-.conclusion .conclusion-content .conclusion-text h3
-{
-    font-size: 24px;
-    margin-bottom: 15px;
-    font-weight: 700;
-    color: var(--text-black-900);
-}
-.conclusion  .conclusion-content .conclusion-text h3  span
-{
-    color: var(--skin-color);
-}
-.conclusion .conclusion-content .conclusion-text p
-{
-    font-size: 23px;
-    line-height: 25px;
-    color: var(--text-black-700);
 }
 /*new added*/
 .formbold-main-wrapper {
@@ -836,31 +957,71 @@ h3.my-profession
   /*view table*/
   /* css/style.css */
 
-/* advantage and disadvantage */
-.gallery-item1 {
-    flex: 1 1 45%;
-    max-width: 45%;
-    margin: 15px;
+  /* Conclusion */
+.conclusion .conclusion-content
+{
+    flex: 0 0 100%;
+    max-width: 100%;
 }
-.gallery-item-inner1:hover {
-    transform: scale(1.05);
+.conclusion .conclusion-content .conclusion-text
+{
+    flex: 0 0 100%;
+    max-width: 100%;   
 }
-.gallery-img1 img {
-    width: 30rem;
-    height:20rem;
+.conclusion .conclusion-content .conclusion-text h3
+{
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--text-black-900);
 }
-@media(max-width:1199px) {
+.conclusion  .conclusion-content .conclusion-text h3  span
+{
+    color: var(--skin-color);
+}
+.conclusion .conclusion-content .conclusion-text p
+{
+    font-size: 23px;
+    line-height: 25px;
+    color: var(--text-black-700);
+}
+
+/*RESPONSIVE OF WEBSITE*/
+@media(max-width:1199px) 
+{
+    .section .container
+    {
+        padding-top: 70px;
+    }
     .aside
     {
         left: -270px;
     }
-    .main-content
+    .aside.open
     {
-        padding-left: 0;
+        left: 0;
+    }
+    .aside .nav-toggler
+    {
+        display: flex;
+        left: 30px;
+    }
+    .aside .nav-toggler.open
+    {
+        left: 300px;
+    }
+    .section
+    {
+        left: 0;
+    }
+    .section.open
+    {
+        left: 270px;
     }
    /* .surveyinfo .surveyinfo-content .personal-info */
 }
 @media(max-width:991px) {
+    .gallery .gallery-item,
     .surveydetails .surveydetails-item
     {
         flex: 0 0 50%;
@@ -874,5 +1035,16 @@ h3.my-profession
     .home .home-img 
     {
         display: none;
+    }
+}
+@media(max-width:767px) {
+    .surveydetails .surveydetails-item,
+    .gallery .gallery-item ,
+    .surveyinfo .surveyinfo-content .advantages,
+    .surveyinfo .surveyinfo-content .disadvantages,
+    .surveyinfo .surveyinfo-content .personal-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
