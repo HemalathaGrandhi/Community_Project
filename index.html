@@ -10,9 +10,16 @@
     <meta name="author" content="Hemalatha Grandhi">
     <!-- ===== CSS FILES =====-->
     <link rel="icon" href="https://res.cloudinary.com/dpt5xsgko/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1711876740/hero_e7e4jg.webp" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="color-1.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/skins/color-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- ===== Style Switcher ===== -->
+    <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled >
+    <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled >
+    <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled >
+    <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled >
+    <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled >
+    <link rel="stylesheet" href="css/style-switcher.css">
     <script src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
@@ -40,14 +47,14 @@
         <!-- ==== MAIN CONTENT STARTS ==== -->
         <div class="main-content">
             <!-- ==== HOME SECTION START ==== -->
-            <section class="home section " id="home">
+            <section class="home active section " id="home"> 
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
                             <h3 class="hello">IDENTIFICATION OF <span class="name">IMPACT OF SOCIAL MEDIA</span> ON PEOPLE OF AN AREA</h3>
-                            <h3 class="my-profession">I' m <span class="typing">Hemalatha</span></h3>
+                            <h3 class="my-profession">I' m <span class="typing">G. Hemalatha</span></h3>
                             <p>We are from Geethanjali Institute of Science and Technology,  Department of Artificial Intelligence and Machine Learning</p>
-                            <a href="#info" class="btn hire-me">For More Info</a>
+                            <a href="#info" class="btn">For More Info</a>
                         </div>
                         <div class="home-img padd-15">
                             <img src="logo.jpg" alt="">
@@ -75,6 +82,13 @@
                                         <h3>SURVEY <span> INTRODUCTION</span></h3>
                                         <p>In today's digital age, social media platforms such as Facebook, Twitter, and Instagram had significant influence on individuals within specific geographic areas. This study explores how social media engagement the impacts on people in a chosen locality, considering demographics, cultural norms, and socioeconomic status. Through a mix of quantitative data and qualitative insights, it investigates effects on social relationships, mental health, economic behavior, and societal norms. Additionally, the study addresses concerns about privacy, misinformation, and algorithmic biases, aiming to inform strategies for fostering healthy, inclusive communities in the digital era.
                                         </p>
+                                    </div><br><br>
+                                    <div class="gallery-item-s padd-15">
+                                        <div class="gallery-item-inner1 shawdow-dark">
+                                            <div class="gallery-img1">
+                                                <img src="soc1.jpg" alt="">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -82,8 +96,7 @@
                                 <div class="personal-info">
                                     <div class="row">
                                         <div class="buttons padd-15">
-                                            <a href="#details" class="btn">SURVEY DETAILS</a>
-                                            <a href="#gallery" class="btn hire-me">SURVEY IMAGES</a>
+                                            <a href="#details" data-section-index="1" class="btn hire-me">SURVEY DETAILS</a>
                                         </div>
                                     </div>
                                 </div>   
@@ -196,7 +209,7 @@
                                     <div class="gallery-item padd-15">
                                         <div class="gallery-item-inner1 shawdow-dark">
                                             <div class="gallery-img1">
-                                                <img src="info-1.jpg" alt="">
+                                                <img src="neg3.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -294,7 +307,7 @@
                     </div>
                     <!-- Right side: Text -->
                     <div class="right">
-                        <h2><span>PIE CHART</span> DETAILS</h2>
+                        <h2 style="color: var(--text-black-900);"><span>PIE CHART</span> DETAILS</h2>
                         <h4>This is the pie chart about the count of impact on social media.</h4>
                         <!--  text or content as needed -->
                     </div>
@@ -306,14 +319,14 @@
                     </div>
                     <!-- Right side: Text -->
                     <div class="right">
-                        <h2><span>BAR CHART </span> DETAILS</h2>
+                        <h2 style="color: var(--text-black-900);"><span>BAR CHART </span> DETAILS</h2>
                         <h4>This is the bar chart about the count of how often they use.</h4>
                         <!-- text or content as needed -->
                     </div>
                 </div>  
                 <h2  style="color: var(--text-black-900);text-align: center;">To Review about the Power Point Presentation click the button below </h2>
                 <div class="row">
-                    <div class="buttons padd-15" style="margin-top:5rem;margin-left:35%;">
+                    <div class="buttons padd-15" style="margin-top:3rem;margin-left:35%;">
                        <a target="_blank" href="https://docs.google.com/presentation/d/1ucXW0CCESM2qxw0-H3RmRnyueCs-pLsegy7xf6xgk-g/edit#slide=id.g15293ac3f3d_0_94" class="btn">POWER POINT Presentation</a>
                     </div>
                 </div>   
@@ -373,7 +386,7 @@
                 </div>
             </section>
             <!-- ==== GALLERY SECTION END ==== -->
-            <!-- ==== IMPACT SECTION END ==== -->
+            <!-- ==== IMPACT SECTION START ==== -->
             <section class="impact section "id="impact">
                 <div class="container">
                     <div class="row">
@@ -386,9 +399,46 @@
                             <div class="row">
                                 <div class="impact-text padd-15 ">
                                     <h3>From the above survey <span> the Positive Impact </span></h3>
-                                    <p>In conclusion, social media has significantly impacted people in specific areas, offering numerous advantages while also presenting challenges. It has transformed social dynamics, facilitated information sharing, boosted local economies, promoted community engagement, and facilitated cultural exchange. However, it has also contributed to social isolation, misinformation spread, privacy concerns, cyberbullying, and addiction. To harness the benefits of social media while mitigating its drawbacks, it's essential for communities to promote responsible usage, educate residents about online safety, and establish regulatory measures where necessary. By fostering a healthy balance between online connectivity and real-world interactions, communities can leverage the power of social media to enhance cohesion, collaboration, and collective well-being within their area.
+                                    <p>Social media has changed the way we communicate in many positive ways. It helps us stay connected with friends and family, no matter where they are in the world. It's also a great platform for spreading awareness about important issues, allowing people to come together and support causes. Social media makes it easier to network and find job opportunities, helping people grow in their careers. Businesses benefit too, as they can market their products more cheaply and engage with customers directly. Additionally, social media keeps us informed about what's happening in the world. It offers plenty of educational content, encouraging continuous learning. Lastly, it provides a space for creativity and self-expression, letting people share their talents and ideas with others.
                                     </p>
+                                    <div class="container1">
+                                    <div class="gallery-item padd-15">
+                                        <div class="gallery-item-inner19 shawdow-dark">
+                                            <div class="gallery-img19">
+                                               <img src="pos3.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item padd-15">
+                                        <div class="gallery-item-inner19 shawdow-dark">
+                                            <div class="gallery-img19">
+                                               <img src="pos1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div> 
                                 </div>
+                                    <div class="impact-intro ">
+                                        <h3>From the above survey <span> the Negative Impact </span></h3>
+                                        <p>Social media, while beneficial, also has its negative impacts. It can lead to addiction, consuming excessive amounts of time that could be spent on more productive activities. Cyberbullying is a significant issue, with many individuals experiencing harassment and abuse online. Social media often perpetuates unrealistic standards, leading to issues with self-esteem and body image, especially among young people. Privacy concerns are also prevalent, as personal information can be easily accessed and misused. The spread of misinformation and fake news is another major problem, influencing public opinion and sometimes leading to harmful consequences. Social media can also contribute to feelings of loneliness and depression, as people compare their lives to the often idealized portrayals they see online. Additionally, it can disrupt face-to-face communication skills, making it harder for people to engage in real-world interactions. Lastly, the constant exposure to negative content can increase stress and anxiety levels.
+                                        </p>
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class="container2">
+                            <div class="gallery-item padd-15">
+                                <div class="gallery-item-inner19 shawdow-dark">
+                                    <div class="gallery-img19">
+                                       <img src="neg1.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-item padd-15">
+                                <div class="gallery-item-inner19 shawdow-dark">
+                                    <div class="gallery-img19">
+                                       <img src="info-1.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div> 
                             </div>
                         </div>
                     </div>
@@ -584,7 +634,27 @@
         <!-- ==== MAIN CONTENT END==== -->
     </div>
     <!-- ===== MAIN CONTAINER END ==== -->
+    <!-- ===== STYLE SWITCHER START ===== -->
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog fa-spin"></i> 
+        </div>
+        <div class="day-night s-icon">
+            <i class="fas "></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+    </div>
+    <!-- ===== STYLE SWITCHER END ===== -->
     <!-- ===== JS FILES ==== -->
-    <script src="script.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>    
+    <script src="js/style-switcher.js"></script>
 </body>
 </html>
